@@ -5,8 +5,8 @@
 } */
 
 
-let num = 50;
-/*
+// let num = 50;
+ /*
 if (num ==49) {
     console.log('This is not the answer')
 } else if (num == 48) {
@@ -52,12 +52,34 @@ if (num ==49) {
 
 
 
-while (num < 55 ) {// пока переменная num меньше 55, в консоль будет выводиться num. Чтобы выводить вместе с 55, нужно в условии использовать меньше или равно <=
-    console.log(num) //если запустить такой код, он будет выполнять бесконечно
-    num++;
-}
+// while (num < 55 ) {// пока переменная num меньше 55, в консоль будет выводиться num. Чтобы выводить вместе с 55, нужно в условии использовать меньше или равно <=
+//     console.log(num) //если запустить такой код, он будет выполнять бесконечно
+//     num++;
+// }
+//
+// do{ console.log(num)
+//         num++;
+// } while (num<55);
+//
 
-do{ console.log(num)
-        num++;
-} while (num<55);
+const numberOfFilms = +prompt('HOw many films have you watched?');
+
+const personaMoviesDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+};
+
+
+const a = prompt("What is the lat movie yu watched?");
+const b = prompt("How would you rate it?");
+const c = prompt("What is the lat movie yu watched?");
+const d = prompt("How would you rate it?");
+
+personaMoviesDB.movies[a] = b;
+personaMoviesDB.movies[c] = d;
+
+console.log(personaMoviesDB);
 
