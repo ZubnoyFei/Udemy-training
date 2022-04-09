@@ -62,24 +62,26 @@ if (num ==49) {
 // } while (num<55);
 //
 
-const numberOfFilms = +prompt('HOw many films have you watched?');
+// const numberOfFilms = +prompt('How many films have you watched?');
+//
+// const personaMoviesDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false,
+// };
+//
+// if(personaMoviesDB.count < 10) {
+//     console.log("You have seen too little movies");
+// } else if (personaMoviesDB.count >= 10 && personaMoviesDB.count < 30) {
+//     console.log("You are classical watcher");
+// } else if (personaMoviesDB.count >30) {
+//     console.log("You are a movie maniac");
+// }
+//
+// console.log(personaMoviesDB);
 
-const personaMoviesDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false,
-};
 
 
-const a = prompt("What is the lat movie yu watched?");
-const b = prompt("How would you rate it?");
-const c = prompt("What is the lat movie yu watched?");
-const d = prompt("How would you rate it?");
-
-personaMoviesDB.movies[a] = b;
-personaMoviesDB.movies[c] = d;
-
-console.log(personaMoviesDB);
 
