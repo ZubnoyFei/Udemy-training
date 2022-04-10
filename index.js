@@ -30,7 +30,7 @@ if (num ==49) {
 <!--Switch -->
 
 // Это конструкция, которая поддерживает несколько модификаций в коде. Конструкция switch используется только для строго сравнения. Если if..else мог проверять на больше
-//меньше, то switch проверяет только строгое соответсвие
+//меньше, то switch проверяет только строгое соответствие
 
 /*
  switch (num) {
@@ -83,5 +83,109 @@ if (num ==49) {
 // console.log(personaMoviesDB);
 
 
+<!-- Functions -->
+/*
+let num = 20;
+function showMessage(text) {
+    console.log(text);
 
+    let num = 20;
+}
+
+showMessage("Hello World"); //При вызове функции со словами Hello World это расценивается программой как аргумент text. Этот аргумент передаётся в консоль и вызывается.
+console.log(num); // The result is "Num is not defined", because the variable num is not available outside the function showMessage
+
+
+function calc (firstNum, secondNum) {
+    return (firstNum+secondNum);
+}
+
+console.log(calc(3,4));
+
+console.log(calc(10,7));
+
+*/
+
+<!--Function expression -->
+
+
+// const logger = function() { //We can create the const and assign the function to this const
+//     console.log('Hello world')
+// }
+//
+// logger();
+
+<!--Arrow function -->
+//
+// const calc = (a,b) => {console.log (a+b)};
+//
+// calc (4,6);
+
+
+
+//
+// const string = "test";
+//
+// console.log(string.length)// вызов свойства length, который покажет длину строки
+// console.log(string.toUpperCase()) // вызов МЕТОДА, который переводит строку в верхний регистр
+
+<!-- Поиск подстроки с помощью метода indexOf -->
+
+//     const fruit = "Some fruit";
+//
+// console.log(fruit.indexOf("fruit")); // Мы ищем, с какого места начинается fruit
+
+// const logg = "Hello world";
+//
+// console.log(logg.slice(6,11))// console gets the "world" word.
+
+
+
+
+// const number = 12.2;
+//
+// console.log(Math.round(number))//Math метод используется для округления числа. В консоли выведет 12.
+//
+// const pixel = "12.2px";
+//
+// console.log(parseInt(pixel));// Метод ParseInt переводит число в другую систему исчисления. Мы получим 12, и 12- это уже число.
+//
+// console.log(parseFloat(pixel)); // returns to console 12.2
+
+
+
+<!-- Callback functions -->
+
+/*Коллбэк- это функция, которая должна быть выполнена после того, как другая функция завершила своё выполнение*/
+// function first() {
+//     setTimeout(function(){
+//         console.log("Callback function");
+//     }, 5000) //Функция будет выполнена с задержкой в 5 секунд
+// }
+//
+//
+//
+//
+// function secondFunction() {
+//     console.log(" Calling the function without the timeout")
+// }
+//
+// first();
+// secondFunction();
+
+
+// function learnJS(lang, callback) { // callback означает, что в качестве аргумента в функцию мы передадим другую функцию
+//     console.log(`I'm learning: ${lang}`);
+//     callback(); // Таким образом мы вызываем эту функцию
+// }
+//
+// function done() {
+//     console.log("I finished this lesson")
+// }
+//
+// learnJS('JavaScript'/*Мы передаем как раз аргумент*/, done);// Мы передаём функцию done без каких-либо круглых скобок. Нам не нужно вызывать функцию, мы передаём функцию, чтобы
+// //в дальнейшем её вызвать
+
+
+<!-- объекты, деструктуризация объектов -->
 
