@@ -201,7 +201,7 @@ const options = {
     }
 }
 
-console.log(options.name);
+//console.log(options.name);
 
 // /*Для удаления значения из объекта мы используем оператор delete*/
 // delete(options.name);
@@ -217,14 +217,19 @@ console.log(options.name);
 
 /* мы можем запустить перебор внутри перебора*/
 
+let counter = 0;
+
 for (let key in options) {
     if (typeof (options[key]) === 'object') { // Мы проверяем, если это объект, и если тру, то запускаем, к примеру, новый перебор внутри
         for (let i in options[key]) {
             console.log(`Свойство ${i} имеет значение ${options[key] [i]}`);/*Мы перебираем внутри объекта colors. Чтобы достучаться до его объектов внутри, мы используем двойные квадратные
        скобки*/
+            counter++; //с помощью каунтер мы считаем количество свойств внутри цикла
         }
     } else {
         console.log(`Свойство ${key} имеет значение ${options[key]}`); // Если ключ не является объектом, то мы просто выводим такое значение.
+        counter++;
     }
 
     }
+console.log(counter);
