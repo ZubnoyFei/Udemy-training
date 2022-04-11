@@ -198,8 +198,15 @@ const options = {
         border:'red',
         background:'blue',
 
+    },
+    makeTest: function() { // Метод, который мы сами создали, который работает внутри функции
+        console.log("Test");
     }
-}
+};
+options.makeTest();
+
+
+
 
 //console.log(options.name);
 
@@ -217,19 +224,23 @@ const options = {
 
 /* мы можем запустить перебор внутри перебора*/
 
-let counter = 0;
+// let counter = 0;
+//
+// for (let key in options) {
+//     if (typeof (options[key]) === 'object') { // Мы проверяем, если это объект, и если тру, то запускаем, к примеру, новый перебор внутри
+//         for (let i in options[key]) {
+//             console.log(`Свойство ${i} имеет значение ${options[key] [i]}`);/*Мы перебираем внутри объекта colors. Чтобы достучаться до его объектов внутри, мы используем двойные квадратные
+//        скобки*/
+//             counter++; //с помощью каунтер мы считаем количество свойств внутри цикла
+//         }
+//     } else {
+//         console.log(`Свойство ${key} имеет значение ${options[key]}`); // Если ключ не является объектом, то мы просто выводим такое значение.
+//         counter++;
+//     }
+//
+//     }
+// console.log(counter);
 
-for (let key in options) {
-    if (typeof (options[key]) === 'object') { // Мы проверяем, если это объект, и если тру, то запускаем, к примеру, новый перебор внутри
-        for (let i in options[key]) {
-            console.log(`Свойство ${i} имеет значение ${options[key] [i]}`);/*Мы перебираем внутри объекта colors. Чтобы достучаться до его объектов внутри, мы используем двойные квадратные
-       скобки*/
-            counter++; //с помощью каунтер мы считаем количество свойств внутри цикла
-        }
-    } else {
-        console.log(`Свойство ${key} имеет значение ${options[key]}`); // Если ключ не является объектом, то мы просто выводим такое значение.
-        counter++;
-    }
 
-    }
-console.log(counter);
+console.log(Object.keys(options));
+
