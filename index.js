@@ -64,25 +64,65 @@ if (num ==49) {
 
 // const numberOfFilms = +prompt('How many films have you watched?');
 //
-// const personaMoviesDB = {
-//     count: numberOfFilms,
-//     movies: {},
-//     actors: {},
-//     genres: [],
-//     privat: false,
-// };
-//
-// if(personaMoviesDB.count < 10) {
-//     console.log("You have seen too little movies");
-// } else if (personaMoviesDB.count >= 10 && personaMoviesDB.count < 30) {
-//     console.log("You are classical watcher");
-// } else if (personaMoviesDB.count >30) {
-//     console.log("You are a movie maniac");
-// }
-//
-// console.log(personaMoviesDB);
+
+<!--У нас есть рабочее приложение, состоящее из отдельных функций. Мы переписываем его, чтобы функции стали методом объекта -->
+const personalMoviesDB = {
+    count: 0,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false,
+    start: function() {
+
+        personalMoviesDB.count= +prompt('How many films have you watched?', '');
+        while (personalMoviesDB.count == ''|| personalMoviesDB.count== null || isNan(personalMoviesDB.count)){
+            personalMoviesDB.count= +prompt('How many films have you watched?', '');
+        }
+    },
+    rememberMyFilms: function() {
+        for(let i = 0; i < 2; i++) {
+            const a = prompt('Один из последних просмотренных фильмов?', ''),
+                b = prompt('какую оценку вы бы ему поставили?','');
+
+            if(a !=null && b!=null && a!= '' && b!= '' && a.length<50){
+                personalMoviesDB.movies[a]=b;
+                console.log('done');
+            } else {
+                console.log('error');
+                i--;
+            }
+        }
+    },
+    detectPersonaLevel: function() {
+        if (personaMoviesDB.count < 10) {
+            console.log("You have seen too little movies");
+        } else if (personaMoviesDB.count >= 10 && personaMoviesDB.count < 30) {
+            console.log("You are classical watcher");
+        } else if (personaMoviesDB.count > 30) {
+            console.log("You are a movie maniac");
+        }
+    },
+    showMyDB: function(hidden) {
+        if(!hidden) {
+            console.log(personalMovieDB);
+        }
+    },
+    writeYourGenres: function() {
+        for(let i = 1; i<=3; i++){
+            personalMoviesDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
+        }
+    }
+
+};
 
 
+
+
+console.log(personaMoviesDB);
+
+
+
+rememberMyFilms();
 <!-- Functions -->
 /*
 let num = 20;
@@ -327,26 +367,26 @@ console.log(calc(10,7));
 // console.log(copy);
 // console.log(obj);
 
-function copy(mainObj) { // Функция передаёт новый объект, перебирая свойство, которое было в obj
-    let objCopy= {};
-
-    let key;
-    for (key in mainObj) {
-        objCopy[key] = mainObj[key]; // Таким образом создаём копию нашего главного объекта
-    }
-
-    return objCopy;
-}
-
-
-const number = {
-    a:2,
-    b: 5,
-    c: {
-        x: 7,
-        y: 4
-    }
-};
+// function copy(mainObj) { // Функция передаёт новый объект, перебирая свойство, которое было в obj
+//     let objCopy= {};
+//
+//     let key;
+//     for (key in mainObj) {
+//         objCopy[key] = mainObj[key]; // Таким образом создаём копию нашего главного объекта
+//     }
+//
+//     return objCopy;
+// }
+//
+//
+// const number = {
+//     a:2,
+//     b: 5,
+//     c: {
+//         x: 7,
+//         y: 4
+//     }
+// };
 
 // const newNumbers = copy(number); // Таким образом совершается клонирование объекта
 //
@@ -381,28 +421,30 @@ const number = {
 // console.log(oldArray);//[ 'a', 'b', 'c' ]
 //
 
-const video = ['youtube', 'vimeo', 'rutube'],
-    blogs = ['wordpress', 'livejournal', 'blogger'],
-    internet = [...video, ...blogs, 'vk', 'fb'];
-
-console.log(internet); //['youtube','vimeo','rutube','wordpress','livejournal','blogger','vk','fb']
+// const video = ['youtube', 'vimeo', 'rutube'],
+//     blogs = ['wordpress', 'livejournal', 'blogger'],
+//     internet = [...video, ...blogs, 'vk', 'fb'];
 //
-function log(a,b,c) {
-    console.log(a);
-    console.log(b);
-    console.log(c);
-}
-const num = [2,5,7];
+// console.log(internet); //['youtube','vimeo','rutube','wordpress','livejournal','blogger','vk','fb']
+// //
+// function log(a,b,c) {
+//     console.log(a);
+//     console.log(b);
+//     console.log(c);
+// }
+// const num = [2,5,7];
+//
+// log(...num);
+//
+// const array = ["a", "b"];
+//
+// const additionalArray = [...array];
+//
+// const testObject = {
+//     one: 1,
+//     two: 2,
+// };
+//
+// const newObject = {...testObject};
 
-log(...num);
 
-const array = ["a", "b"];
-
-const additionalArray = [...array];
-
-const testObject = {
-    one: 1,
-    two: 2,
-};
-
-const newObject = {...testObject};
