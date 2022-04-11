@@ -307,3 +307,102 @@ console.log(calc(10,7));
 
 
 
+
+
+// let a = 5,
+//     b = a;
+// b = b + 5;
+// console.log(b);
+// console.log(a);
+//
+// const obj = {
+//     a: 5,
+//     b : 1
+// };
+
+// const copy = obj; // Объект не копируется, передаётся ссылка на объект obj
+//
+// copy.a = 10;
+//
+// console.log(copy);
+// console.log(obj);
+
+function copy(mainObj) { // Функция передаёт новый объект, перебирая свойство, которое было в obj
+    let objCopy= {};
+
+    let key;
+    for (key in mainObj) {
+        objCopy[key] = mainObj[key]; // Таким образом создаём копию нашего главного объекта
+    }
+
+    return objCopy;
+}
+
+
+const number = {
+    a:2,
+    b: 5,
+    c: {
+        x: 7,
+        y: 4
+    }
+};
+
+// const newNumbers = copy(number); // Таким образом совершается клонирование объекта
+//
+// newNumbers.a = 10; // присваиваем в объекте newNumbers переменной а свойство 10;
+// newNumbers.c.x = 10;
+// // console.log(newNumbers); // { a: 10, b: 5, c: { x: 7, y: 4 } }
+// // console.log(number);
+//
+// const add = {
+//     d: 17,
+//     e: 20
+// };
+//
+// const clone = Object.assign({}, add); //{ a: 10, b: 5, c: { x: 10, y: 4 } }
+//
+// clone.d = 20;
+//
+// // console.log(add);//{ d: 17, e: 20 }
+// //
+// // console.log(clone);//{ d: 20, e: 20 }
+//
+// //{ a: 2, b: 5, c: { x: 10, y: 4 } }
+// //{ a: 2, b: 5, c: { x: 10, y: 4 }, d: 17, e: 20 } Создана независимая поверхностная копия объекта
+//
+//
+//
+// const oldArray = ['a', 'b', 'c'];
+// const newArray = oldArray.slice();// метод, который позволяет копировать старый массив
+
+// newArray[1] = 'Hello World'
+// console.log(newArray); // [ 'a', 'Hello World', 'c' ]
+// console.log(oldArray);//[ 'a', 'b', 'c' ]
+//
+
+const video = ['youtube', 'vimeo', 'rutube'],
+    blogs = ['wordpress', 'livejournal', 'blogger'],
+    internet = [...video, ...blogs, 'vk', 'fb'];
+
+console.log(internet); //['youtube','vimeo','rutube','wordpress','livejournal','blogger','vk','fb']
+//
+function log(a,b,c) {
+    console.log(a);
+    console.log(b);
+    console.log(c);
+}
+const num = [2,5,7];
+
+log(...num);
+
+const array = ["a", "b"];
+
+const additionalArray = [...array];
+
+const testObject = {
+    one: 1,
+    two: 2,
+};
+
+const newObject = {...testObject};
