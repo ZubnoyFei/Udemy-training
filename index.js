@@ -189,23 +189,23 @@ console.log(calc(10,7));
 
 <!-- объекты, деструктуризация объектов -->
 
-const options = {
-
-    name: 'test',
-    width:'1024',
-    height: '1024',
-    colors: {
-        border:'red',
-        background:'blue',
-
-    },
-    makeTest: function() { // Метод, который мы сами создали, который работает внутри функции
-        console.log("Test");
-    }
-};
-options.makeTest();
-
-
+// const options = {
+//
+//     name: 'test',
+//     width:'1024',
+//     height: '1024',
+//     colors: {
+//         border:'red',
+//         background:'blue',
+//
+//     },
+//     makeTest: function() { // Метод, который мы сами создали, который работает внутри функции
+//         console.log("Test");
+//     }
+// };
+// options.makeTest();
+//
+//
 
 
 //console.log(options.name);
@@ -242,5 +242,68 @@ options.makeTest();
 // console.log(counter);
 
 
-console.log(Object.keys(options));
+//console.log(Object.keys(options));
+
+
+<!--Деструктуризация объекта -->
+//
+// const {border, bg} = options.colors; //Мы вытащили свойства в объекте в качестве отдельной переменной
+//
+// console.log(border);// В консоли выводится Test и red.
+//
+//
+
+
+<!-- Массивы и псевдомассивы -->
+
+
+// const arr = [2,3,6,8,10];
+// arr.sort(compareNum);
+// console.log(arr);
+//
+// function compareNum (a,b) { //Функция для сортировки массива по порядку.
+//     return a-b;
+// }
+
+// arr[99] = 0;// Мы помещаем на 99 место
+//
+// console.log(arr.length); // В консоли будет 100
+// console.log(arr); // [ 2, 3, 6, 8, 10, <94 empty items>, 0 ]
+
+
+//   arr.forEach(function(item,i,arr)// метод принимает в себя коллбэк-функцию и 3 аргумента: item(просто название, может быть как угодно(item, button); i(номер по порядку); ссылка на сам массив
+// {
+//       console.log(`${i}: ${item} внутри массива ${arr}`);
+//   });
+
+
+//arr.pop()//Удаляет последний элемент из массива;
+
+// arr.push(10); //Добавляет элемент в конец массива
+//
+// console.log(arr);// result [ 1, 2, 3, 4, 5 ]
+
+// Мы также можем перебирать массив. К примеру, добавлять или убирать что-либо из массива
+
+// for(let i = 0; i < arr.length; i++) { //Цикл отрабатывает до тех пор, пока не закончатся элементы внутри массива
+//     console.log(arr[i]);//  В консоли выведется 2 3 6 8 10. Мы перебрали массив
+// }
+
+
+// for(let i of arr) { // Этот метод также выведет массив. Но этот метод работает только с массивоподобными элементами. К примеру, массив, строка, псевдомассив.
+//     console.log(i);
+// }
+
+// for (let value of arr) {
+//     console.log(value)
+// }
+//
+// const str = prompt("","");
+//
+// const products = str.split(", ");
+// products.sort();
+//
+// console.log(products.join(';'));
+
+
 
