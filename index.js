@@ -107,6 +107,14 @@ const personalMoviesDB = {
             console.log(personalMovieDB);
         }
     },
+    toggleVisibleMyDB: function() {
+      if (personalMoviesDB.privat) {
+          personalMoviesDB.privat = false;
+      } else {
+          personalMoviesDB.privat = true;
+      }
+    },
+
     writeYourGenres: function() {
         for(let i = 1; i<=3; i++){
             personalMoviesDB.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`);
@@ -118,7 +126,7 @@ const personalMoviesDB = {
 
 
 
-console.log(personaMoviesDB);
+console.log(personalMoviesDB);
 
 
 
