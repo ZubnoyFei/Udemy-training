@@ -66,7 +66,7 @@ if (num ==49) {
 //
 
 <!--У нас есть рабочее приложение, состоящее из отдельных функций. Мы переписываем его, чтобы функции стали методом объекта -->
-const personalMoviesDB = {
+/*const personalMoviesDB = {
     count: 0,
     movies: {},
     actors: {},
@@ -145,7 +145,7 @@ const personalMoviesDB = {
 
 console.log(personalMoviesDB);
 
-
+*/
 <!-- Functions -->
 /*
 let num = 20;
@@ -372,6 +372,8 @@ console.log(calc(10,7));
 
 
 
+
+
 // let a = 5,
 //     b = a;
 // b = b + 5;
@@ -469,5 +471,6 @@ console.log(calc(10,7));
 // };
 //
 // const newObject = {...testObject};
+
 
 
