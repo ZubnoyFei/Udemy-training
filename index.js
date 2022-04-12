@@ -472,5 +472,3 @@ console.log(calc(10,7));
 //
 // const newObject = {...testObject};
 
-
-
